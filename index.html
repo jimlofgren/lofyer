@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lofyer</title>
+<link rel="stylesheet" href="style.css?v=14">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <radialGradient id="capGrad" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#fffdf5"/>
+      <stop offset="0.6" stop-color="#f1e9d2"/>
+      <stop offset="1" stop-color="#cfc4a6"/>
+    </radialGradient>
+    <radialGradient id="glossGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+</svg>
+<header>
+  <h1>lof<span>yer</span></h1>
+  <p class="tagline">voice → space → tape → memory · play with a w s e d f t g y h u j k · z / x shift octave · or switch on line in</p>
+  <div id="headerKnobs"></div>
+  <button id="randomize" class="foot start random" title="randomize all knobs and switches">⚄ random</button>
+  <button id="start" class="foot start">start</button>
+  <div id="mainJack"></div>
+</header>
+<canvas id="scope"></canvas>
+<main id="board"></main>
+<svg id="cables"></svg>
+<div class="paper-grain"></div>
+<script src="processors.js?v=14"></script>
+<script src="app.js?v=14"></script>
+</body>
+</html>
